@@ -22,27 +22,22 @@ class WeatherCli < Formula
   end
 
   def install
-    # Extract the compressed archive.
-    # system "tar", "-xzf", Dir["*.tar.gz"].first
-
-    # Rename the binary so that it is installed as "weather-cli" or "weather-cli.exe"
-    if OS.windows?
-      mv "weather-cli.exe", "weather.exe"
-      bin.install "weather.exe"
-    else
-      # For macOS and Linux, assume the binary is named according to the platform-specific filename.
-      # Rename to a generic name.
+    # Rename the binary and install to bin.
+    if OS.mac?
       if File.exist? "weather-cli.x86_64-apple-darwin"
         mv "weather-cli.x86_64-apple-darwin", "weather"
       elsif File.exist? "weather-cli.aarch64-apple-darwin"
         mv "weather-cli.aarch64-apple-darwin", "weather"
-      elsif File.exist? "weather-cli.x86_64-unknown-linux-gnu"
+      end
+    elsif OS.linux?
+      if File.exist? "weather-cli.x86_64-unknown-linux-gnu"
         mv "weather-cli.x86_64-unknown-linux-gnu", "weather"
       elsif File.exist? "weather-cli.aarch64-unknown-linux-gnu"
         mv "weather-cli.aarch64-unknown-linux-gnu", "weather"
       end
-      bin.install "weather"
     end
+
+    bin.install "weather"
   end
 
   test do
