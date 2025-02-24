@@ -1,22 +1,22 @@
 class WeatherCli < Formula
   desc "A CLI tool for weather information"
   homepage "https://github.com/GloryWong/weather-cli"
-  version "v1.0.16" # This will be updated automatically
+  version "v1.0.17" # This will be updated automatically
 
   if OS.mac?
     if Hardware::CPU.arm?
-                        url "https://github.com/GloryWong/weather-cli/releases/download/v1.0.16/weather-cli.aarch64-apple-darwin.tar.gz"
+                              url "https://github.com/GloryWong/weather-cli/releases/download/v1.0.17/weather-cli.aarch64-apple-darwin.tar.gz"
       sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     else
-                        url "https://github.com/GloryWong/weather-cli/releases/download/v1.0.16/weather-cli.x86_64-apple-darwin.tar.gz"
+                              url "https://github.com/GloryWong/weather-cli/releases/download/v1.0.17/weather-cli.x86_64-apple-darwin.tar.gz"
       sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-                        url "https://github.com/GloryWong/weather-cli/releases/download/v1.0.16/weather-cli.aarch64-unknown-linux-gnu.tar.gz"
+                              url "https://github.com/GloryWong/weather-cli/releases/download/v1.0.17/weather-cli.aarch64-unknown-linux-gnu.tar.gz"
       sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     else
-                        url "https://github.com/GloryWong/weather-cli/releases/download/v1.0.16/weather-cli.x86_64-unknown-linux-gnu.tar.gz"
+                              url "https://github.com/GloryWong/weather-cli/releases/download/v1.0.17/weather-cli.x86_64-unknown-linux-gnu.tar.gz"
       sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
     end
   end
