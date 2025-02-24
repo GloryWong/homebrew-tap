@@ -23,7 +23,7 @@ class WeatherCli < Formula
 
   def install
     # Extract the compressed archive.
-    system "tar", "-xzf", Dir["*.tar.gz"].first
+    # system "tar", "-xzf", Dir["*.tar.gz"].first
 
     # Rename the binary so that it is installed as "weather-cli" or "weather-cli.exe"
     if OS.windows?
