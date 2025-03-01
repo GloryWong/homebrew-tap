@@ -1,23 +1,23 @@
 class WeatherCli < Formula
   desc "A CLI tool for weather information"
   homepage "https://github.com/GloryWong/weather-cli"
-  version "v1.1.0" # This will be updated automatically
+  version "v1.1.1" # This will be updated automatically
 
   if OS.mac?
     if Hardware::CPU.arm?
-                                          url "https://github.com/GloryWong/weather-cli/releases/download/v1.1.0/weather-cli.aarch64-apple-darwin.tar.gz"
-                  sha256 "50e5cce2a5267dc520cf5246210cb1d0ac1a9c26f9941a7a91c3aa09db9671ed"
+                                                url "https://github.com/GloryWong/weather-cli/releases/download/v1.1.1/weather-cli.aarch64-apple-darwin.tar.gz"
+                        sha256 "5ca44c9c4860a9213036b18da25373544efac9fd246ebbac089490f816305b85"
     else
-                                          url "https://github.com/GloryWong/weather-cli/releases/download/v1.1.0/weather-cli.x86_64-apple-darwin.tar.gz"
-                  sha256 "38211d4bfc4a31917967cf9a3e9706c036a8d99185f3faef5ba4d92e5a02e61c"
+                                                url "https://github.com/GloryWong/weather-cli/releases/download/v1.1.1/weather-cli.x86_64-apple-darwin.tar.gz"
+                        sha256 "1c1dd19b26e814f62358b9b3bb76f54453c2abbe99bdc6240b2c65fa6c926300"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-                                          url "https://github.com/GloryWong/weather-cli/releases/download/v1.1.0/weather-cli.aarch64-unknown-linux-gnu.tar.gz"
-                  sha256 "b247ab25cec8f4a5bd27809429166a92d6f9c4a940f7b5243169f957e64cbe57"
+                                                url "https://github.com/GloryWong/weather-cli/releases/download/v1.1.1/weather-cli.aarch64-unknown-linux-gnu.tar.gz"
+                        sha256 "8da79cce189f72e493a1cc2c743b9d25ed42036ccddafb58c11356913577c2dd"
     else
-                                          url "https://github.com/GloryWong/weather-cli/releases/download/v1.1.0/weather-cli.x86_64-unknown-linux-gnu.tar.gz"
-                  sha256 "4cb24b1aeb1ab0804bb1db42fb1214f48a2726ff0958607038dc10f222da0879"
+                                                url "https://github.com/GloryWong/weather-cli/releases/download/v1.1.1/weather-cli.x86_64-unknown-linux-gnu.tar.gz"
+                        sha256 "3862d0b28e00aa3398c1903437ee1e70d660b22b222de96e4fb3adbff3611a09"
     end
   end
 
