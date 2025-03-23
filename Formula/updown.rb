@@ -1,23 +1,23 @@
 class Updown < Formula
   desc "A CLI tool for upload or download files to or from GitHub Gist"
   homepage "https://github.com/GloryWong/updown"
-  version "v1.2.3" # This will be updated automatically
+  version "v1.2.4" # This will be updated automatically
 
   if OS.mac?
     if Hardware::CPU.arm?
-                                                                                                                                                      url "https://github.com/GloryWong/updown/releases/download/v1.2.3/updown.aarch64-apple-darwin.tar.gz"
-                                                                                                                              sha256 "0a16d80496dd809ab8a6d3e506189d4cda2a0f84aa64afebda8813e028aea026"
+                                                                                                                                                            url "https://github.com/GloryWong/updown/releases/download/v1.2.4/updown.aarch64-apple-darwin.tar.gz"
+                                                                                                                                    sha256 "d85b60125bad8d3f8c2281e878a811dd6c69d4296a2dd16f3871739016482dfe"
     else
-                                                                                                                                                      url "https://github.com/GloryWong/updown/releases/download/v1.2.3/updown.x86_64-apple-darwin.tar.gz"
-                                                                                                                              sha256 "2108eecee1265d17260c0d66300bfabcfee9b6457c9792ec9f765a8e0486854d"
+                                                                                                                                                            url "https://github.com/GloryWong/updown/releases/download/v1.2.4/updown.x86_64-apple-darwin.tar.gz"
+                                                                                                                                    sha256 "d520c0a76c9f24d5ee1f9ac253645f70a08353f7d4221147929b786f9240feb3"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-                                                                                                                                                      url "https://github.com/GloryWong/updown/releases/download/v1.2.3/updown.aarch64-unknown-linux-gnu.tar.gz"
-                                                                                                                              sha256 "ce90dc4df227be3a3b72c24e56a7c21da136fb0b6d3804746d9a32b0aa1a3a92"
+                                                                                                                                                            url "https://github.com/GloryWong/updown/releases/download/v1.2.4/updown.aarch64-unknown-linux-gnu.tar.gz"
+                                                                                                                                    sha256 "546f8c470a5473e6d98ef1667eb3b049f07d585154747ba04bf01da484bdfd6c"
     else
-                                                                                                                                                      url "https://github.com/GloryWong/updown/releases/download/v1.2.3/updown.x86_64-unknown-linux-gnu.tar.gz"
-                                                                                                                              sha256 "9d668761133bca25da7aaba04caa7d5016bc6f5fb800b54e0e2c902f08ed9e40"
+                                                                                                                                                            url "https://github.com/GloryWong/updown/releases/download/v1.2.4/updown.x86_64-unknown-linux-gnu.tar.gz"
+                                                                                                                                    sha256 "95cdf6a2ab9a552d082c4d64748def78eaffb25f1aef9ed42bbc5346776580c7"
     end
   end
 
