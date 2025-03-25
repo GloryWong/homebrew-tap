@@ -1,23 +1,23 @@
 class Updown < Formula
   desc "A CLI tool for upload or download files to or from GitHub Gist"
   homepage "https://github.com/GloryWong/updown"
-  version "v1.2.5" # This will be updated automatically
+  version "v1.3.0" # This will be updated automatically
 
   if OS.mac?
     if Hardware::CPU.arm?
-                                                                                                                                                                  url "https://github.com/GloryWong/updown/releases/download/v1.2.5/updown.aarch64-apple-darwin.tar.gz"
-                                                                                                                                          sha256 "24145198463587dc31a0bb1ce623986a51aadce1bbbaa4eac5a5859dbea2b68f"
+                                                                                                                                                                        url "https://github.com/GloryWong/updown/releases/download/v1.3.0/updown.aarch64-apple-darwin.tar.gz"
+                                                                                                                                                sha256 "39b334c8fd846caaf1aff592fdc2e175f84abc43b15a7d5a9fea7e740264b7f6"
     else
-                                                                                                                                                                  url "https://github.com/GloryWong/updown/releases/download/v1.2.5/updown.x86_64-apple-darwin.tar.gz"
-                                                                                                                                          sha256 "322be099ecbc1aca73f0c766636e95a0de12fb308e37e1c9edc6c9b19a7c4477"
+                                                                                                                                                                        url "https://github.com/GloryWong/updown/releases/download/v1.3.0/updown.x86_64-apple-darwin.tar.gz"
+                                                                                                                                                sha256 "bcd7ed910427748c492750348a38b001980b36dea6999608958cf902307e390e"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-                                                                                                                                                                  url "https://github.com/GloryWong/updown/releases/download/v1.2.5/updown.aarch64-unknown-linux-gnu.tar.gz"
-                                                                                                                                          sha256 "cde63ea36893f0fa7a50e8cdf9d1b5c66432cd946edae996f1f7450f3cc51764"
+                                                                                                                                                                        url "https://github.com/GloryWong/updown/releases/download/v1.3.0/updown.aarch64-unknown-linux-gnu.tar.gz"
+                                                                                                                                                sha256 "9d4e49f608616aaa7a9bc0c09180a3e5e96045173dc1ede601c613508a99c22c"
     else
-                                                                                                                                                                  url "https://github.com/GloryWong/updown/releases/download/v1.2.5/updown.x86_64-unknown-linux-gnu.tar.gz"
-                                                                                                                                          sha256 "e1740051dd3c4b0c8d8b180e3c6f6a2043e23a3c738c46f866342a5b205dd0a9"
+                                                                                                                                                                        url "https://github.com/GloryWong/updown/releases/download/v1.3.0/updown.x86_64-unknown-linux-gnu.tar.gz"
+                                                                                                                                                sha256 "60ae41f7ce4ebbabbaecc4e80f2c2c0c1379f5a81e07c228cf977d5222209f8f"
     end
   end
 
