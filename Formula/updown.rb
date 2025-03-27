@@ -1,23 +1,23 @@
 class Updown < Formula
   desc "A CLI tool for upload or download files to or from GitHub Gist"
   homepage "https://github.com/GloryWong/updown"
-  version "v1.3.0" # This will be updated automatically
+  version "v1.3.1" # This will be updated automatically
 
   if OS.mac?
     if Hardware::CPU.arm?
-                                                                                                                                                                        url "https://github.com/GloryWong/updown/releases/download/v1.3.0/updown.aarch64-apple-darwin.tar.gz"
-                                                                                                                                                sha256 "39b334c8fd846caaf1aff592fdc2e175f84abc43b15a7d5a9fea7e740264b7f6"
+                                                                                                                                                                              url "https://github.com/GloryWong/updown/releases/download/v1.3.1/updown.aarch64-apple-darwin.tar.gz"
+                                                                                                                                                      sha256 "8c7162a3c05d888ed8e93df73e8cea60665ac50a9b0a99b0fca52e52b13752ae"
     else
-                                                                                                                                                                        url "https://github.com/GloryWong/updown/releases/download/v1.3.0/updown.x86_64-apple-darwin.tar.gz"
-                                                                                                                                                sha256 "bcd7ed910427748c492750348a38b001980b36dea6999608958cf902307e390e"
+                                                                                                                                                                              url "https://github.com/GloryWong/updown/releases/download/v1.3.1/updown.x86_64-apple-darwin.tar.gz"
+                                                                                                                                                      sha256 "99c29281d67e3bd2661ecb75dd4c317f13a68e020f48bc5083b3df61a39bd283"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-                                                                                                                                                                        url "https://github.com/GloryWong/updown/releases/download/v1.3.0/updown.aarch64-unknown-linux-gnu.tar.gz"
-                                                                                                                                                sha256 "9d4e49f608616aaa7a9bc0c09180a3e5e96045173dc1ede601c613508a99c22c"
+                                                                                                                                                                              url "https://github.com/GloryWong/updown/releases/download/v1.3.1/updown.aarch64-unknown-linux-gnu.tar.gz"
+                                                                                                                                                      sha256 "b120106238a8a183fcba876d709d6db442750d11d207319d941f416f6ab3b285"
     else
-                                                                                                                                                                        url "https://github.com/GloryWong/updown/releases/download/v1.3.0/updown.x86_64-unknown-linux-gnu.tar.gz"
-                                                                                                                                                sha256 "60ae41f7ce4ebbabbaecc4e80f2c2c0c1379f5a81e07c228cf977d5222209f8f"
+                                                                                                                                                                              url "https://github.com/GloryWong/updown/releases/download/v1.3.1/updown.x86_64-unknown-linux-gnu.tar.gz"
+                                                                                                                                                      sha256 "b589c3fb799b63502bc4d7d53c4e4bd70d91680bce5eb5fbabdf1e05fc4d7209"
     end
   end
 
