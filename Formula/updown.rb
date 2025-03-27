@@ -38,6 +38,20 @@ class Updown < Formula
     end
 
     bin.install "updown"
+
+    # Ensure the ~/.updown/ directory exists
+    (Pathname.new(Dir.home)/".updown/logs").mkpath
+  end
+
+  service do
+    run [opt_bin/"updown", "upload"]
+    #run_type :cron
+    #cron "0 10,16,22 * * *" # Seconds in a day
+    run_type :interval
+    interval 60
+    log_path Pathname.new(Dir.home)/".updown/logs/updown-brew-service.log"
+    error_log_path Pathname.new(Dir.home)/".updown/logs/updown-brew-service.error.log"
+    environment_variables PATH: std_service_path_env
   end
 
   test do
