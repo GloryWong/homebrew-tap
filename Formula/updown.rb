@@ -46,7 +46,7 @@ class Updown < Formula
   service do
     run [opt_bin/"updown", "upload"]
     run_type :cron
-    cron "0 10,16,22 * * *" # Seconds in a day
+    cron "0 15 * * *" # Seconds in a day
     log_path Pathname.new(Dir.home)/".updown/logs/updown-brew-service.log"
     error_log_path Pathname.new(Dir.home)/".updown/logs/updown-brew-service.error.log"
     environment_variables PATH: std_service_path_env
