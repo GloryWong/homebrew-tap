@@ -44,7 +44,7 @@ class Updown < Formula
   end
 
   service do
-    run [opt_bin/"updown", "upload"]
+    run [opt_bin/"updown", "upload", "--quiet"]
     run_type :cron
     cron "0 15 * * *" # 15:00 every day
     log_path Pathname.new(Dir.home)/".updown/logs/updown-brew-service.log"
