@@ -1,23 +1,23 @@
 class Updown < Formula
   desc "A CLI tool for upload or download files to or from GitHub Gist"
   homepage "https://github.com/GloryWong/updown"
-  version "v1.4.2" # This will be updated automatically
+  version "v1.5.0" # This will be updated automatically
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/GloryWong/updown/releases/download/v1.4.2/updown.aarch64-apple-darwin.tar.gz"
-      sha256 "2f6cf58575ccdfb22b2b956088ccb705b8478f71b4e87a404bc3fa9d1b8906db"
+            url "https://github.com/GloryWong/updown/releases/download/v1.5.0/updown.aarch64-apple-darwin.tar.gz"
+            sha256 "17e81b19c43e6efdff3853d917802ac563eecf5677249b39b20ca9170258e9d8"
     else
-      url "https://github.com/GloryWong/updown/releases/download/v1.4.2/updown.x86_64-apple-darwin.tar.gz"
-      sha256 "f00263822e30808f15839db84a3336aac43394b3c397e6626c28e33f525cc927"
+            url "https://github.com/GloryWong/updown/releases/download/v1.5.0/updown.x86_64-apple-darwin.tar.gz"
+            sha256 "06bc30491596e13deb921446c3af7dd0ef7015f37242c5deb4faf00b1a32896b"
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/GloryWong/updown/releases/download/v1.4.2/updown.aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "fb574fa8ce0e1a4876c6935eeeaea62912d4e92db6e1bcecbf748a6add15a7c6"
+            url "https://github.com/GloryWong/updown/releases/download/v1.5.0/updown.aarch64-unknown-linux-gnu.tar.gz"
+            sha256 "910fff4b5d962302accebaebe935d7315eb0976d219d0b1ddf946e7ef23b3f77"
     else
-      url "https://github.com/GloryWong/updown/releases/download/v1.4.2/updown.x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "f689b851cab335e73397282fbe75494760dfe443fb9607dd386e6fdd431ba224"
+            url "https://github.com/GloryWong/updown/releases/download/v1.5.0/updown.x86_64-unknown-linux-gnu.tar.gz"
+            sha256 "48831e15073258a4b7663b9184e84dae5bc6854e78a02a6013bdf25241958f4a"
     end
   end
 
