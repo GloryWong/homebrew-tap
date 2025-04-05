@@ -5,21 +5,21 @@
 class WeatherCli < Formula
   desc "A CLI tool to upload or download files to or from GitHub Gist"
   homepage "https://github.com/GloryWong/weather-cli"
-  version "1.2.0"
+  version "1.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/GloryWong/weather-cli/releases/download/v1.2.0/weather-cli_1.2.0_darwin_amd64.tar.gz"
-      sha256 "01e3202695fe9c7279db4bf6f850b83c3d5fa7a5401ce34719808fcde0b673bd"
+      url "https://github.com/GloryWong/weather-cli/releases/download/v1.2.1/weather-cli_1.2.1_darwin_amd64.tar.gz"
+      sha256 "0ba17c750163e9afcb577597bb1a1f8d5ca9823bd8bbc30d4eedf5694b84d1c4"
 
       def install
         bin.install "weather"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/GloryWong/weather-cli/releases/download/v1.2.0/weather-cli_1.2.0_darwin_arm64.tar.gz"
-      sha256 "35d553a0fd5dee21378e78af72c042aaeea35ae57564de231e245c0970579125"
+      url "https://github.com/GloryWong/weather-cli/releases/download/v1.2.1/weather-cli_1.2.1_darwin_arm64.tar.gz"
+      sha256 "c58fbc940f3828df234b8cbc181d7e08e7ae3056ff6bdd2acc71a1fc71a8c09f"
 
       def install
         bin.install "weather"
@@ -30,8 +30,8 @@ class WeatherCli < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/GloryWong/weather-cli/releases/download/v1.2.0/weather-cli_1.2.0_linux_amd64.tar.gz"
-        sha256 "01f11571abccd98d3be8a907c908b59bbb5278fb7bb1c5e77ee3ff7b814b212a"
+        url "https://github.com/GloryWong/weather-cli/releases/download/v1.2.1/weather-cli_1.2.1_linux_amd64.tar.gz"
+        sha256 "a38a735928d5aee26b7bd5d71426d138c27e5e54da6313d5b82156457cadb885"
 
         def install
           bin.install "weather"
@@ -40,8 +40,8 @@ class WeatherCli < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/GloryWong/weather-cli/releases/download/v1.2.0/weather-cli_1.2.0_linux_arm64.tar.gz"
-        sha256 "984fdcedc999c12bdf3c57569dab46f046097eb254e8f25ce0479826856d4923"
+        url "https://github.com/GloryWong/weather-cli/releases/download/v1.2.1/weather-cli_1.2.1_linux_arm64.tar.gz"
+        sha256 "8ca999d5b5e4c885354b38c484b10e0b0d52c1574a5a5e3c26efad180ed197ab"
 
         def install
           bin.install "weather"
