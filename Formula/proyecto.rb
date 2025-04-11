@@ -5,21 +5,21 @@
 class Proyecto < Formula
   desc "Proyecto is a lightweight CLI tool for managing local projects"
   homepage "https://github.com/GloryWong/proyecto"
-  version "2.2.0"
+  version "2.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/GloryWong/proyecto/releases/download/v2.2.0/proyecto_2.2.0_darwin_amd64.tar.gz"
-      sha256 "733daaebd0f3c8512334aebf0e31d6c8a858b0809ac53e8f695c177fb43bdcf2"
+      url "https://github.com/GloryWong/proyecto/releases/download/v2.2.1/proyecto_2.2.1_darwin_amd64.tar.gz"
+      sha256 "ac4eadb18d716c0093d4c64569eecfa5991aff2bf8a56ae560ea86d964a43160"
 
       def install
         bin.install "proyecto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/GloryWong/proyecto/releases/download/v2.2.0/proyecto_2.2.0_darwin_arm64.tar.gz"
-      sha256 "5ec3faf8a7a37fb6fd5a9ecbe0f2eb4eeb02dc50b2dd74bbd5f048f4b2bb96d7"
+      url "https://github.com/GloryWong/proyecto/releases/download/v2.2.1/proyecto_2.2.1_darwin_arm64.tar.gz"
+      sha256 "a4aaec3eef5401a44548d0dd26078b9e20ba0a585756615798d1cd8b7e647a34"
 
       def install
         bin.install "proyecto"
@@ -30,8 +30,8 @@ class Proyecto < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/GloryWong/proyecto/releases/download/v2.2.0/proyecto_2.2.0_linux_amd64.tar.gz"
-        sha256 "47c758d384c05c7bb0dc4b8b0af3b738b8af6de1cdbc0a8e1e225ff832a85e4e"
+        url "https://github.com/GloryWong/proyecto/releases/download/v2.2.1/proyecto_2.2.1_linux_amd64.tar.gz"
+        sha256 "20dc5f33bd443147f3db9fe2299089a0797f4fd93d7aa158333b154a7ef4f709"
 
         def install
           bin.install "proyecto"
@@ -40,8 +40,8 @@ class Proyecto < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/GloryWong/proyecto/releases/download/v2.2.0/proyecto_2.2.0_linux_arm64.tar.gz"
-        sha256 "bb454ea00fd9350c157b46eeabc0a1c1e7cfcfd3a75a6f346c9279d836ec147d"
+        url "https://github.com/GloryWong/proyecto/releases/download/v2.2.1/proyecto_2.2.1_linux_arm64.tar.gz"
+        sha256 "c11557aaab8d17c6e31620b874319b000a5f9ee397b7b7aa6204734bee837b5b"
 
         def install
           bin.install "proyecto"
