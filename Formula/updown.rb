@@ -5,21 +5,21 @@
 class Updown < Formula
   desc "A CLI tool to upload or download files to or from GitHub Gist"
   homepage "https://github.com/GloryWong/updown"
-  version "1.5.2"
+  version "1.5.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/GloryWong/updown/releases/download/v1.5.2/updown_1.5.2_darwin_amd64.tar.gz"
-      sha256 "e0960b7f15bda871c7029a5c37be634f3d7bd08da1ed300704ce136f55feea50"
+      url "https://github.com/GloryWong/updown/releases/download/v1.5.3/updown_1.5.3_darwin_amd64.tar.gz"
+      sha256 "909295b66bc69251e33dd57ad5dab0b01d0857fa730e1ee6c01ddeac01268b11"
 
       def install
         bin.install "updown"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/GloryWong/updown/releases/download/v1.5.2/updown_1.5.2_darwin_arm64.tar.gz"
-      sha256 "eba0fcfc9b7446b98384273d1206080f2bd67ffbbdfbc25f95f29a5896a1b0f7"
+      url "https://github.com/GloryWong/updown/releases/download/v1.5.3/updown_1.5.3_darwin_arm64.tar.gz"
+      sha256 "863b919039375c3875be9080a861eba58b3a3f2efe3924bea0c738e143166147"
 
       def install
         bin.install "updown"
@@ -30,8 +30,8 @@ class Updown < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/GloryWong/updown/releases/download/v1.5.2/updown_1.5.2_linux_amd64.tar.gz"
-        sha256 "ea86718d75528dc3a42ebc1eefb8b2b5be053495715f410f8d2770f8c01548d7"
+        url "https://github.com/GloryWong/updown/releases/download/v1.5.3/updown_1.5.3_linux_amd64.tar.gz"
+        sha256 "58492a30c49946ade13cc23a9e6425ece5df448bf5f8fc163fec4c8b4ab92c91"
 
         def install
           bin.install "updown"
@@ -40,8 +40,8 @@ class Updown < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/GloryWong/updown/releases/download/v1.5.2/updown_1.5.2_linux_arm64.tar.gz"
-        sha256 "97956bcb6f22a3193c3ae93a35b352fecec056d3741053057150a8cf7bfc59dd"
+        url "https://github.com/GloryWong/updown/releases/download/v1.5.3/updown_1.5.3_linux_arm64.tar.gz"
+        sha256 "5216a754a9db4a041d3faa6ebbf7ce739659badaff503dbb13f93db25fe60cc8"
 
         def install
           bin.install "updown"
@@ -50,10 +50,24 @@ class Updown < Formula
     end
   end
 
+  def post_install
+    # Ensure the ~/.updown/logs directory exists
+    (Pathname.new(Dir.home)/".updown/logs").mkpath
+  end
+
   def caveats
     <<~EOS
       updown --help
     EOS
+  end
+
+  service do
+    run [opt_bin/"updown", "upload", "--quiet", "--notify"]
+    run_type :cron
+    cron "0 15 * * *" # 15:00 every day
+    log_path Pathname.new(Dir.home)/".updown/logs/updown-brew-service.log"
+    error_log_path Pathname.new(Dir.home)/".updown/logs/updown-brew-service.error.log"
+    environment_variables PATH: std_service_path_env
   end
 
   test do
