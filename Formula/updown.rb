@@ -5,21 +5,21 @@
 class Updown < Formula
   desc "A CLI tool to upload or download files to or from GitHub Gist"
   homepage "https://github.com/GloryWong/updown"
-  version "1.5.6"
+  version "1.5.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/GloryWong/updown/releases/download/v1.5.6/updown_1.5.6_darwin_amd64.tar.gz"
-      sha256 "2df93ee162fd7bde9a7f8dc235452c1036a759c22e4719f8e36b3e6442f9ec89"
+      url "https://github.com/GloryWong/updown/releases/download/v1.5.7/updown_1.5.7_darwin_amd64.tar.gz"
+      sha256 "baf20f88cb4fe6bd0f3a6add007668adfb7868383aa535e0b6631faaa8ddfcba"
 
       def install
         bin.install "updown"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/GloryWong/updown/releases/download/v1.5.6/updown_1.5.6_darwin_arm64.tar.gz"
-      sha256 "ead89471a415b73358f4b8319f20796b192c9298a073a503654beefe7a6fc704"
+      url "https://github.com/GloryWong/updown/releases/download/v1.5.7/updown_1.5.7_darwin_arm64.tar.gz"
+      sha256 "99e70113c83f677816fc5f01141e1a256a04c70e833f6e29f4dc51fecaef08bf"
 
       def install
         bin.install "updown"
@@ -28,24 +28,18 @@ class Updown < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/GloryWong/updown/releases/download/v1.5.6/updown_1.5.6_linux_amd64.tar.gz"
-        sha256 "eb5dfbca84a8752aed0bcb4e4675c09e6cd7cf0e71ad3432bc3635375c3990c9"
-
-        def install
-          bin.install "updown"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/GloryWong/updown/releases/download/v1.5.7/updown_1.5.7_linux_amd64.tar.gz"
+      sha256 "f43da25b20cc0251d684f484f0d002c32b18f18962b858ea76806b9974134127"
+      def install
+        bin.install "updown"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/GloryWong/updown/releases/download/v1.5.6/updown_1.5.6_linux_arm64.tar.gz"
-        sha256 "a81349ecc5b0308a9a7bf8991518c21c590e3d2c08208a76a76ca51718335c93"
-
-        def install
-          bin.install "updown"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/GloryWong/updown/releases/download/v1.5.7/updown_1.5.7_linux_arm64.tar.gz"
+      sha256 "5fb39e0f9f131528183765fc3ab75471440c3082c77ff0740de4b6eed8002eab"
+      def install
+        bin.install "updown"
       end
     end
   end
