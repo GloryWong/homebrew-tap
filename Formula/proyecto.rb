@@ -5,21 +5,21 @@
 class Proyecto < Formula
   desc "Proyecto is a lightweight CLI tool for managing local projects"
   homepage "https://github.com/GloryWong/proyecto"
-  version "2.4.0"
+  version "2.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/GloryWong/proyecto/releases/download/v2.4.0/proyecto_2.4.0_darwin_amd64.tar.gz"
-      sha256 "aed35ba997fc2b7d85cc8ccfb39bbe9821a640289d549c183595e3980eed7388"
+      url "https://github.com/GloryWong/proyecto/releases/download/v2.4.1/proyecto_2.4.1_darwin_amd64.tar.gz"
+      sha256 "078eba9ac892786b427931f4e2c6c10331e368e6985f7b244de29969ec66d10c"
 
       def install
         bin.install "proyecto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/GloryWong/proyecto/releases/download/v2.4.0/proyecto_2.4.0_darwin_arm64.tar.gz"
-      sha256 "07b7698f6a7d30b7acf09ebeb924d45b01a78547c68396cc6e734f6323aa0b24"
+      url "https://github.com/GloryWong/proyecto/releases/download/v2.4.1/proyecto_2.4.1_darwin_arm64.tar.gz"
+      sha256 "dd64b3d76dbf985f462a67cb98fcd0f7f45850e5a45844e472c2fcd817e57550"
 
       def install
         bin.install "proyecto"
@@ -29,15 +29,15 @@ class Proyecto < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/GloryWong/proyecto/releases/download/v2.4.0/proyecto_2.4.0_linux_amd64.tar.gz"
-      sha256 "9e1bd871327f245a2d849e5b0be76f2cb17c69fbd0af5d2e5f1286589e88cf4a"
+      url "https://github.com/GloryWong/proyecto/releases/download/v2.4.1/proyecto_2.4.1_linux_amd64.tar.gz"
+      sha256 "40c362170b2964ac3dc82f34b0478177b7d05c79fadc550d62ccc282c242f0d9"
       def install
         bin.install "proyecto"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/GloryWong/proyecto/releases/download/v2.4.0/proyecto_2.4.0_linux_arm64.tar.gz"
-      sha256 "a7119e7e29640c6e6b5cb81768200d7c87952c42189080802cb55761735e24d5"
+      url "https://github.com/GloryWong/proyecto/releases/download/v2.4.1/proyecto_2.4.1_linux_arm64.tar.gz"
+      sha256 "dbf1f90a4948a527f431aadd54c28559f412ab96a03ab4e32c45a80db0301d80"
       def install
         bin.install "proyecto"
       end
