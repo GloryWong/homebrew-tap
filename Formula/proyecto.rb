@@ -5,40 +5,40 @@
 class Proyecto < Formula
   desc "Proyecto is a lightweight CLI tool for managing local projects"
   homepage "https://github.com/GloryWong/proyecto"
-  version "2.5.0"
+  version "2.5.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/GloryWong/proyecto/releases/download/v2.5.0/proyecto_2.5.0_darwin_amd64.tar.gz"
-      sha256 "0b9926fe1afe8949bb1e00e3dd4e7805341aa550c029567549b952ea0cbb2932"
+      url "https://github.com/GloryWong/proyecto/releases/download/v2.5.2/proyecto_2.5.2_darwin_amd64.tar.gz"
+      sha256 "8013a4badfa1d7851111a41e6eb02e7b739e69dc0042898051b121941967bdec"
 
-      def install
+      define_method(:install) do
         bin.install "proyecto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/GloryWong/proyecto/releases/download/v2.5.0/proyecto_2.5.0_darwin_arm64.tar.gz"
-      sha256 "e90750f9b279d5b2a50afa4a867b1e2990d05651849751d3f01d561979e3da6c"
+      url "https://github.com/GloryWong/proyecto/releases/download/v2.5.2/proyecto_2.5.2_darwin_arm64.tar.gz"
+      sha256 "64ab3948671fa538cc1b5862bff2402a73409df928cc4e4a1b269b9116c9bcf7"
 
-      def install
+      define_method(:install) do
         bin.install "proyecto"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/GloryWong/proyecto/releases/download/v2.5.0/proyecto_2.5.0_linux_amd64.tar.gz"
-      sha256 "40147b71ab8d7395a36e19aa3a9163210e95cb7cfd803cc4fcfcd06ba2e223b0"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/GloryWong/proyecto/releases/download/v2.5.2/proyecto_2.5.2_linux_amd64.tar.gz"
+      sha256 "4d9fd9ab9c822dce362c3961291dd133596679c515b6b400e4bf2e403a342f2b"
+      define_method(:install) do
         bin.install "proyecto"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/GloryWong/proyecto/releases/download/v2.5.0/proyecto_2.5.0_linux_arm64.tar.gz"
-      sha256 "d032bc94d33b1c4e8cb22181efb82d1d001a9d05d5e04a3b1b9361407acc4dfc"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/GloryWong/proyecto/releases/download/v2.5.2/proyecto_2.5.2_linux_arm64.tar.gz"
+      sha256 "7c5f78fffe831fc970758f07768c0501c4da884dff948efcd2bfc61ca5820ad2"
+      define_method(:install) do
         bin.install "proyecto"
       end
     end
