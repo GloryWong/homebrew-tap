@@ -5,21 +5,21 @@
 class Updown < Formula
   desc "A CLI tool to upload or download files to or from GitHub Gist"
   homepage "https://github.com/robertwang1001/updown"
-  version "1.7.1"
+  version "1.7.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/robertwang1001/updown/releases/download/v1.7.1/updown_1.7.1_darwin_amd64.tar.gz"
-      sha256 "593ba1e3e422681387928cd2a0e194c253e585162844e79c0b5e0895b91afb58"
+      url "https://github.com/robertwang1001/updown/releases/download/v1.7.2/updown_1.7.2_darwin_amd64.tar.gz"
+      sha256 "447a4f5a6e0d1560c27d0d0fb6d0c00a55be0ab3a69eeee642800d64f25cefbb"
 
       define_method(:install) do
         bin.install "updown"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/robertwang1001/updown/releases/download/v1.7.1/updown_1.7.1_darwin_arm64.tar.gz"
-      sha256 "b1b4e65338a9bfc439533a5391d3c7f54a3a751f1563e29551e5caef3e47fda0"
+      url "https://github.com/robertwang1001/updown/releases/download/v1.7.2/updown_1.7.2_darwin_arm64.tar.gz"
+      sha256 "e47f7749a2f41a7eec49ad87a12852ae180d1fa4eef10ae0055f14097e9272ae"
 
       define_method(:install) do
         bin.install "updown"
@@ -29,15 +29,15 @@ class Updown < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robertwang1001/updown/releases/download/v1.7.1/updown_1.7.1_linux_amd64.tar.gz"
-      sha256 "c357fef3894455ea788200b6321c3f57056b5667fe8639d1cf15c64bde13a802"
+      url "https://github.com/robertwang1001/updown/releases/download/v1.7.2/updown_1.7.2_linux_amd64.tar.gz"
+      sha256 "a117d05cb3afb088e3af8d72dc0007d9134f543eb3152a800f121d6bda97f06b"
       define_method(:install) do
         bin.install "updown"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/robertwang1001/updown/releases/download/v1.7.1/updown_1.7.1_linux_arm64.tar.gz"
-      sha256 "d458379c687e57b48e41da4bea1bf0e4b89ab2316dd399ad8d3b81829600ca50"
+      url "https://github.com/robertwang1001/updown/releases/download/v1.7.2/updown_1.7.2_linux_arm64.tar.gz"
+      sha256 "292366751913e06a10ac7f216f27c46fe0535ff8b7d94303d721aca817371a1e"
       define_method(:install) do
         bin.install "updown"
       end
